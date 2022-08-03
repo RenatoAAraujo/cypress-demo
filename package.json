@@ -1,0 +1,10 @@
+{
+  "name": "cypress-example-docker-compose",
+  "version": "1.0.0",
+  "description": "Example running Cypress tests against Apache server via docker-compose",
+  "scripts": {
+    "build": "docker-compose build",
+    "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e"
+  },
+  "private": true
+}
