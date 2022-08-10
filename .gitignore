@@ -2,9 +2,9 @@
 node_modules/
 
 # Cypress
-src/cypress/screenshots/
-src/cypress/videos/
-src/cypress/results
+cypress/screenshots/
+cypress/videos/
+cypress/results
 
 # Unit Testing/Test Coverage
 .cache
