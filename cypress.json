@@ -1,0 +1,20 @@
+{
+  "pluginsFile": false,
+  "supportFile": false,
+  "env": {
+    "TEST": ""
+  },
+  "retries":{
+    "runMode": 0,
+    "openMode": 0
+  },
+  "watchForFileChanges": true,
+  "responseTimeout": 5000,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/screenshots",
+  "trashAssetsBeforeRuns": false,
+  "video": true,
+  "videoCompression": 32,
+  "videosFolder": "cypress/videos",
+  "videoUploadOnPasses": true
+}

@@ -11,6 +11,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config)
     },
-    baseUrl: 'http://localhost:8080',
+    // baseUrl: 'http://localhost:8080',
+    // supportFile: 'cypress/support/e2e.js'
   },
 })
