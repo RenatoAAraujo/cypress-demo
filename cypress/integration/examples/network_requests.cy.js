@@ -29,8 +29,6 @@ context('Network Requests', () => {
       expect(server.enable).to.be.true
       // forces requests that don't match your routes to 404
       expect(server.force404).to.be.false
-      // whitelists requests from ever being logged or stubbed
-      expect(server.whitelist).to.be.a('function')
     })
 
     cy.server({
@@ -171,7 +169,7 @@ context('Network Requests', () => {
     cy.wait('@postComment').should((xhr) => {
       expect(xhr.requestBody).to.include('email')
       expect(xhr.requestHeaders).to.have.property('Content-Type')
-      expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.route()')
+      expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.intercept()')
     })
 
     // Stub a response to PUT comments/ ****
