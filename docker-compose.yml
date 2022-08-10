@@ -24,8 +24,8 @@ services:
     # so the command can simply add any arguments
     command: "open"
     volumes:
-      - ./cypress:/app/cypress
-      - ./cypress.json:/app/cypress.json
+      - ./cypress:/cypress
+      - ./cypress.json:/cypress.json
 
   # this container will run Cypress test using Firefox browser
   # note that both Chrome and Firefox browsers were pre-installed in the Docker image
