@@ -5,6 +5,8 @@ node_modules/
 cypress/screenshots/
 cypress/videos/
 cypress/results
+data/data-minio-cypress
+data/data-mongo-cypress
 
 # Unit Testing/Test Coverage
 .cache
