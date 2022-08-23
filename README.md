@@ -48,4 +48,7 @@ npm isntall cy2 cypress
 export CYPRESS_API_URL="http://localhost:1234/"
 npx cy2 run --record --key XXX --parallel --ci-build-id `date +%s`
 ```
-> to run test on parallel make sure to use the same "--ci-build-id"
+>To run test on parallel make sure to use the same "--ci-build-id"
+
+>Access the dasboard on http://localhost:8080
+
