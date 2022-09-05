@@ -1,7 +1,7 @@
 # Cypress Demo
 > This project integrates cypress and sorry-cypress (dashboard)
 
-### Requirements
+## Requirements
 * [Docker](https://docs.docker.com/engine/install/debian/)
   
 Create docker group, **you'll need to reboot after this**.
@@ -10,11 +10,16 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 * [Docker Compose](https://docs.docker.com/compose/install/)
-* [git](https://git-scm.com/)
-* [NPM](https://www.npmjs.com/)
+* [Git](https://git-scm.com/)
+* [NodeJs](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/)
 
-### Run Tests
-#### Local - dockercompose (no sorry-cypress integration)
+## Run Tests
+### **Setting up proxy**
+```shell
+export HTTP_PROXY=https://custmgmtapp.eng.alticeusa.net
+```
+### **Local - dockercompose (no sorry-cypress integration)**
 ```shell
 # run tests using built-in Electron browser
 docker-compose run e2e-electron
@@ -37,18 +42,17 @@ services:
             - ./cypress.json:/cypress.json
 ```
 
-#### Command line (with sorry-cypress integration)
+### **Command line (with sorry-cypress integration)**
 To integrate with sorry-cypress, fist run:
 ```shell
-docker-compose -f docker-compose.minio.yml
+docker-compose -f docker-compose.minio.yml up
 ```
 then:
 ```shell
-npm isntall cy2 cypress
+npm isntall cy2 cypress cypress-failed-log
 export CYPRESS_API_URL="http://localhost:1234/"
 npx cy2 run --record --key XXX --parallel --ci-build-id `date +%s`
 ```
 >To run test on parallel make sure to use the same "--ci-build-id"
 
 >Access the dasboard on http://localhost:8080
-

@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "cy2": "^2.0.0",
-    "cypress": "^10.6.0"
+    "cy2": "^2.0.1",
+    "cypress": "^10.7.0",
+    "cypress-failed-log": "^2.10.0"
   }
 }
