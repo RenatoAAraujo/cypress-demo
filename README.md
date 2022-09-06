@@ -15,9 +15,18 @@ sudo usermod -aG docker $USER
 * [npm](https://www.npmjs.com/)
 
 ## Run Tests
+### **Opening ports**
+If ports are closed, run:
+```shell
+systemctl status iptables
+iptables -F
+iptables -L -n -v
+systemctl stop iptables
+systemctl disable iptables
+```
 ### **Setting up proxy**
 ```shell
-export HTTP_PROXY=https://custmgmtapp.eng.alticeusa.net
+export HTTP_PROXY=https://your.domain.com
 ```
 ### **Local - dockercompose (no sorry-cypress integration)**
 ```shell
